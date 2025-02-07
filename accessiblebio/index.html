@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dylan Rodrigues - Accessible Bio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bio</title>
+  <!-- Link to the external CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Dylan Rodrigues</h1>
-        <p>Passionate about accessibility and inclusive technology</p>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="dylan.jpg" alt="A clear and professional headshot of Dylan Rodrigues">
-            <p>I am a computer science student at Texas A&M University with an interest in accessibility, cybersecurity, and AI-driven solutions. My goal is to create technology that is inclusive and usable for everyone.</p>
-        </section>
+  <!-- Header with the main title -->
+  <header>
+    <h1>About Me</h1>
+  </header>
 
-        <section id="interests">
-            <h2>My Interests</h2>
-            <ul>
-                <li>Web accessibility and universal design</li>
-                <li>Cybersecurity and ethical hacking</li>
-                <li>Machine learning and AI</li>
-                <li>Reverse engineering</li>
-                <li>Formula 1 racing</li>
-            </ul>
-            <img src="accessibility-icon.png" alt="" class="decorative"> <!-- Decorative image -->
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you're interested in collaborating on accessibility-focused projects, feel free to reach out!</p>
-            <form action="mailto:dylan@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Find me on <a href="https://github.com/dylan-rodrigues" target="_blank">GitHub</a> or <a href="https://linkedin.com/in/dylan-rodrigues" target="_blank">LinkedIn</a></p>
-    </footer>
+  <!-- Navigation using a list for semantic structure -->
+  <nav>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#interests">Accessibility Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Bio Section -->
+    <section id="bio">
+      <h2>My Biography</h2>
+      <!-- Figure with a non-decorative image of your face -->
+      <figure>
+        <img src="images/my-face.jpg" alt="Portrait of [Your Name]" width="200">
+        <figcaption>That's me!</figcaption>
+      </figure>
+      <p>Hello, I'm [Your Name]. I am passionate about web development and accessibility. I strive to create digital experiences that are inclusive and user-friendly.</p>
+      <p>I have a strong interest in improving web standards, and I keep learning about the latest best practices in accessibility.</p>
+    </section>
+
+    <!-- Accessibility Interests Section -->
+    <section id="interests">
+      <h2>My Interests in Accessibility</h2>
+      <p>Accessibility is vital to ensure that everyone can use the web. Some key aspects that interest me include:</p>
+      <!-- List of accessibility interests -->
+      <ul>
+        <li>Using semantic HTML and proper document structure</li>
+        <li>Providing meaningful alternative text for images</li>
+        <li>Ensuring sufficient color contrast</li>
+        <li>Improving keyboard navigability</li>
+      </ul>
+      <p>For more details, please visit the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">W3C Web Accessibility Initiative</a>.</p>
+    </section>
+
+    <!-- Gallery Section with a decorative image -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>This decorative image enhances the visual appeal of my bio:</p>
+      <!-- Decorative image with an empty alt attribute -->
+      <img src="images/decorative-icon.png" alt="" role="presentation">
+    </section>
+
+    <!-- Contact Section with a form and a table -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you would like to get in touch, please use the form below:</p>
+      <!-- A simple form that sends an email (using the mailto: approach) -->
+      <form action="mailto:example@example.com" method="post" enctype="text/plain">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div>
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+
+      <!-- Table with additional contact information -->
+      <table>
+        <caption>Additional Contact Information</caption>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Email</td>
+            <td>example@example.com</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>(123) 456-7890</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer with semantic text emphasis -->
+  <footer>
+    <p>&copy; 2025 <strong>[Your Name]</strong>. All rights reserved.</p>
+  </footer>
 </body>
 </html>

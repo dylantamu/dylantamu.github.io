@@ -1,0 +1,138 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base styling for the body */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #ffffff; /* High contrast background */
+    color: #000000;           /* High contrast text color */
+    padding: 20px;
+  }
+  
+  /* Link styles with proper contrast */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #004499;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #003377;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Figure and caption styling */
+  figure {
+    margin: 1rem 0;
+  }
+  
+  figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Form styling */
+  form div {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: #004499;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ccc;
+  }
+  
+  th,
+  td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
