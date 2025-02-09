@@ -8,8 +8,8 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #ffffed; /* High contrast background */
-    color: #000000;           /* High contrast text color */
+    background-color: #ffffed; 
+    color: #000000;           
     padding: 20px;
   }
 
@@ -54,12 +54,10 @@ body {
     margin-bottom: 2rem;
   }
   
-  /* Figure and caption styling */
   figure {
     margin: 1rem 0;
   }
   
-  /* Form styling */
   form div {
     margin-bottom: 1rem;
   }
@@ -77,7 +75,6 @@ body {
     border-radius: 4px;
   }
   
-  /* Button styling */
   button {
     padding: 0.5rem 1rem;
     background-color: #0066cc;
@@ -92,7 +89,6 @@ body {
     background-color: #004499;
   }
   
-  /* Table styling */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -117,7 +113,6 @@ body {
     text-align: left;
   }
   
-  /* Footer styling */
   footer {
     margin-top: 2rem;
     text-align: center;
