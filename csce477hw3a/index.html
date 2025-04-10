@@ -27,7 +27,6 @@
         async function handleLogin(event) {
           event.preventDefault();
       
-          // Simple sanitization function: remove characters that might be used in scripts
           function sanitize(input) {
             return input.replace(/[<>\\/]/g, '');
           }
@@ -35,29 +34,25 @@
           const emailInput = document.getElementById('email');
           const passwordInput = document.getElementById('password');
       
-          // Sanitize inputs
           let email = sanitize(emailInput.value);
           let password = sanitize(passwordInput.value);
       
-          // Check that fields are not empty (HTML5 required already enforces this)
           if (!email || !password) {
             document.getElementById('login-status').innerText = 'Please fill in all fields.';
             return false;
           }
       
-          // Hash the password using the Web Crypto API (SHA-256)
+          // i used web crypto api to hash the password
           const encoder = new TextEncoder();
           const passwordData = encoder.encode(password);
           const hashBuffer = await crypto.subtle.digest('SHA-256', passwordData);
           const hashArray = Array.from(new Uint8Array(hashBuffer));
           const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-      
-          // For simulation, output the results to the console and display a success message
+       
           console.log('Email:', email);
           console.log('Password Hash:', hashHex);
-          document.getElementById('login-status').innerText = 'Login successful (simulated).';
-      
-          // Optionally store the hashed credentials in localStorage (note: in production, use a secure backend!)
+          document.getElementById('login-status').innerText = 'Login successful.';
+        
           localStorage.setItem('userEmail', email);
           localStorage.setItem('passwordHash', hashHex);
       
