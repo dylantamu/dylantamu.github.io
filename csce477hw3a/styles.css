@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+  }
+  
+  h1 {
+    color: blueviolet;
+    text-align: center;
+  }
+
+  h2 {
+    color: orchid;
+    text-align: center
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  table {
+    text-align: center;
+  }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSCE 432</title>
+  </head>
+  <body>
+    <h1>CSCE 432 HTML Assignment</h1>
+    <h2>Link</h2>
+    <a href="https://www.wikipedia.org/">this is wikipedia</a>
+    <h2>Table</h2>
+    <table>
+        <tr>
+          <th>School</th>
+          <th>Major</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Tamu</td>
+          <td>CSCE</td>
+          <td>USA</td>
+        </tr>
+        <tr>
+          <td>TU</td>
+          <td>CEEN</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+      <h2>Paragraph</h2>
+      <p>Here is our paragraph.............</p>
+    
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form" onsubmit="return handleLogin(event)">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="8">
+          <br>
+          <button type="submit">Login</button>
+        </form>
+        <p id="login-status"></p>
+      </section>
+      <script>
+        async function handleLogin(event) {
+          event.preventDefault();
+      
+          // Simple sanitization function: remove characters that might be used in scripts
+          function sanitize(input) {
+            return input.replace(/[<>\\/]/g, '');
+          }
+      
+          const emailInput = document.getElementById('email');
+          const passwordInput = document.getElementById('password');
+      
+          // Sanitize inputs
+          let email = sanitize(emailInput.value);
+          let password = sanitize(passwordInput.value);
+      
+          // Check that fields are not empty (HTML5 required already enforces this)
+          if (!email || !password) {
+            document.getElementById('login-status').innerText = 'Please fill in all fields.';
+            return false;
+          }
+      
+          // Hash the password using the Web Crypto API (SHA-256)
+          const encoder = new TextEncoder();
+          const passwordData = encoder.encode(password);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', passwordData);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      
+          // For simulation, output the results to the console and display a success message
+          console.log('Email:', email);
+          console.log('Password Hash:', hashHex);
+          document.getElementById('login-status').innerText = 'Login successful (simulated).';
+      
+          // Optionally store the hashed credentials in localStorage (note: in production, use a secure backend!)
+          localStorage.setItem('userEmail', email);
+          localStorage.setItem('passwordHash', hashHex);
+      
+          return false; // Prevent further form submission
+        }
+      </script>
+    </body>
+</html>
